@@ -180,7 +180,7 @@ h3 {
     .card {
         max-width: 100%;
         max-height: 100%;
-    }
+     }
     .card-violet {
         grid-column: 1 / span 2;
     }
@@ -196,6 +196,7 @@ h3 {
     .card-white-big {
         grid-column: 1 / span 3;
         grid-row: 3;
+        height: 90%;
     }
 }
 
@@ -207,10 +208,6 @@ h3 {
         row-gap: 1.5625em;
         margin: 10.3125em auto;
     }
-    /* .card {
-        max-width: 100%;
-        max-height: 100%;
-    } */
     .card-violet {
         grid-column: 1 / span 2;
     }
@@ -220,6 +217,7 @@ h3 {
     .card-white-big {
         grid-column: 4 / 5;
         grid-row: 1 / -1;
+        height: 100%;
     }
     .card-white-small {
         grid-column: 1 / 2;
@@ -267,5 +265,5 @@ h3 {
 }
 
 .attribution a {
-    color: --var(bluehsl(228, 45%, 44%)); 
+    color: --var(blue); 
 }
