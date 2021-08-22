@@ -12,7 +12,6 @@
 body {
     font-family: 'Barlow Semi Condensed', sans-serif;
     background-color: var(--light-grayish-blue);
-    width: 100vw;
 }
 
 img {
@@ -37,6 +36,7 @@ img {
 h2 {
     font-size: .875rem;
     font-weight: 500;
+    opacity: .7;
 }
 
 h3 {
@@ -51,13 +51,14 @@ h3 {
 
 .card quote {
     font-size: 1.0625rem;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 1.2px;
     line-height: 1.375rem;
 }
 
 .card p {
     font-size: .8125rem;
+    font-weight: 600;
     line-height: 1.1875rem;
     max-width: 40ch;
 }
@@ -134,7 +135,7 @@ h3 {
 
 .card p { 
     margin-top: 1.25em;
-    opacity: .4;
+    opacity: .5;
 } 
 
 
@@ -162,19 +163,26 @@ h3 {
 
 
 @media (min-width: 411px) {
+    .card {
+        padding-left: 2.1875em;
+        padding-right: 2.5em;
+    }
     .card p {
         max-width: 100%;
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
     .grid-container {
-        height: 100vh;
-        align-items: center;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        column-gap: 30px; 
-        row-gap: 25px;
+        column-gap: 1.875em; 
+        row-gap: 1.5625em;
+        margin: 10.3125em auto;
+    }
+    .card {
+        max-width: 100%;
+        max-height: 100%;
     }
     .card-violet {
         grid-column: 1 / span 2;
@@ -184,7 +192,7 @@ h3 {
     }
     .card-white-big {
         grid-column: 4 / 5;
-        grid-row: 1 / 2;
+        grid-row: 1 / -1;
     }
     .card-white-small {
         grid-column: 1 / 2;
@@ -192,13 +200,42 @@ h3 {
     .card-darkgray {
         grid-column: 2 / span 2;
     }
+    .card-white-small,
+    .card-white-big {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 15px 25px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    }    
+    .card quote {
+        font-size: 1.1875rem;
+        font-weight: 700;
+        letter-spacing: 1.4px;
+        line-height: 1.6rem;
+        margin-bottom: 2em;
+    }
+    .card-darkgray quote {
+        margin-bottom: 7em; 
+        line-height: 1.85rem;
+    }
+    .card-white-small quote {
+        line-height: 1.9rem;
+    }
+    .card-white-big quote {
+        line-height: 1.5rem;
+    }
+    .card p {
+        letter-spacing: .7px;
+    }
+    @media (min-width: 1440px) {
+        .card-img-quote {
+            right: 17%;
+        }
+    }
 }
 
 
 /* Footer */
 
 .attribution {
-    font-size: 11px; 
+    font-size: .6875em; 
     text-align: center; 
 }
 
