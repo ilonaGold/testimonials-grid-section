@@ -115,11 +115,7 @@ h3 {
     height: 1.875em;
     border-radius: 50%;
     border: 1px solid var(--light-gray);
-}
-
-.card h2, 
-.card h3 {
-    margin-left: .625em;
+    margin-right: .625em;
 }
 
 .card-img-quote {
@@ -177,10 +173,9 @@ h3 {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
     }
-    .card {
-        max-width: 100%;
-        max-height: 100%;
-     }
+    .card-white-big {
+        height: 82%;
+    }
     .card-violet {
         grid-column: 1 / span 2;
     }
@@ -196,7 +191,6 @@ h3 {
     .card-white-big {
         grid-column: 1 / span 3;
         grid-row: 3;
-        height: 90%;
     }
 }
 
@@ -208,6 +202,12 @@ h3 {
         row-gap: 1.5625em;
         margin: 10.3125em auto;
     }
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
     .card-violet {
         grid-column: 1 / span 2;
     }
@@ -217,7 +217,6 @@ h3 {
     .card-white-big {
         grid-column: 4 / 5;
         grid-row: 1 / -1;
-        height: 100%;
     }
     .card-white-small {
         grid-column: 1 / 2;
@@ -233,26 +232,29 @@ h3 {
         font-size: 1.1875rem;
         font-weight: 700;
         letter-spacing: 1.4px;
-        line-height: 1.6rem;
-        margin-bottom: 2em;
     }
     .card-darkgray quote {
-        margin-bottom: 7em; 
         line-height: 1.85rem;
     }
-    .card-white-small quote {
+    .card-white-small quote { 
         line-height: 1.9rem;
     }
     .card-white-big quote {
         line-height: 1.5rem;
-    }
+    } 
     .card p {
+        margin-top: 2em;
         letter-spacing: .7px;
     }
     @media (min-width: 1440px) {
         .card-img-quote {
             right: 17%;
         }
+    }
+    @media (min-width: 1600px) {
+       .card {
+            display: initial;
+       }
     }
 }
 
